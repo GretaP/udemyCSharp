@@ -1,0 +1,11 @@
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\bin\Debug\netcoreapp3.0\PracticeProbText.exe
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\bin\Debug\netcoreapp3.0\PracticeProbText.deps.json
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\bin\Debug\netcoreapp3.0\PracticeProbText.runtimeconfig.json
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\bin\Debug\netcoreapp3.0\PracticeProbText.runtimeconfig.dev.json
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\bin\Debug\netcoreapp3.0\PracticeProbText.dll
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\bin\Debug\netcoreapp3.0\PracticeProbText.pdb
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\obj\Debug\netcoreapp3.0\PracticeProbText.csprojAssemblyReference.cache
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\obj\Debug\netcoreapp3.0\PracticeProbText.AssemblyInfoInputs.cache
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\obj\Debug\netcoreapp3.0\PracticeProbText.AssemblyInfo.cs
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\obj\Debug\netcoreapp3.0\PracticeProbText.dll
+C:\Users\greta\Documents\Projects\Udemy\PracticeProbText\obj\Debug\netcoreapp3.0\PracticeProbText.pdb
