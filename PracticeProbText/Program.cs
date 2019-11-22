@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace PracticeProbText
@@ -105,6 +106,16 @@ namespace PracticeProbText
         //So, if the user enters "inadequate", the program should display 6 on the console.
         public static void Exercise5()
         {
+            Console.WriteLine("Enter and English word");
+            var input = Console.ReadLine();
+            var vowelCount = 0;
+            List<string> vowels = new List<string> {"a", "e", "i", "o", "u", "A","E","I","O","U"};
+            foreach (var n in input)
+            {
+                if (vowels.Contains(n.ToString())) vowelCount++; ;
+                
+            }
+            Console.WriteLine("There are {0} vowels in {1}", vowelCount, input);
         }
 
         /// <summary>
@@ -138,7 +149,7 @@ namespace PracticeProbText
         /// <summary>
         /// returns true if string input in format #-#-#-# is consecutive
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="input">String should be in format #-#-#-#</param>
         /// <returns></returns>
         public static bool ConsecutiveCheck(string input)
         { 
