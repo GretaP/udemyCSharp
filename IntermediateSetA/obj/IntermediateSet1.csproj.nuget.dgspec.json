@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSet1\\IntermediateSet1.csproj": {}
+    "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSetA\\IntermediateSet1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSet1\\IntermediateSet1.csproj": {
+    "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSetA\\IntermediateSet1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSet1\\IntermediateSet1.csproj",
+        "projectUniqueName": "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSetA\\IntermediateSet1.csproj",
         "projectName": "IntermediateSet1",
-        "projectPath": "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSet1\\IntermediateSet1.csproj",
+        "projectPath": "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSetA\\IntermediateSet1.csproj",
         "packagesPath": "C:\\Users\\greta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSet1\\obj\\",
+        "outputPath": "C:\\Users\\greta\\Documents\\Projects\\Udemy\\IntermediateSetA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
