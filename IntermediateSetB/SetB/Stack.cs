@@ -30,10 +30,16 @@ using System.Collections.Generic;
 //Note to self: there are Queue and Stack methods built in to C#, which have stack-like functionality
 namespace SetB
 {
+    /// <summary>
+    /// Acts like a SIMPLE stack.  Has 3 methods: Push, Pop, Clear
+    /// </summary>
     class Stack
     {
         private List<object> _stackList = new List<object>();
         
+        /// <summary>
+        /// Takes an object and passes it to _stackList.  Checks for null obj.
+        /// </summary>
         public void Push(object obj)
         {
             try
@@ -48,15 +54,31 @@ namespace SetB
             }
         }
 
+        /// <summary>
+        /// Removes last obj in _stackList and returns it
+        /// </summary>
+        /// <returns></returns>
        public object Pop()
         {
-           //replace this with null propagation: if (_stackList != null) _stackList.Add(obj);
-           var n = _stackList.Count;
-           var answer = _stackList[n-1];
-           _stackList?.RemoveAt(n-1);
-           return answer;
+            try
+            {
+                if (_stackList.Count  ==0) throw new InvalidOperationException();
+                var n = (_stackList.Count - 1);
+                var answer = _stackList[n];
+                _stackList.RemoveAt(n);
+                return answer;
+            }
+            catch (InvalidOperationException)
+            {
+                Console.WriteLine("You can not use Pop() on an empty Stack");
+                return null;
+            }
+
         }
 
+        /// <summary>
+        /// Clears _stackList
+        /// </summary>
         public void Clear()
         {
             //_stackList = new List<object>();
