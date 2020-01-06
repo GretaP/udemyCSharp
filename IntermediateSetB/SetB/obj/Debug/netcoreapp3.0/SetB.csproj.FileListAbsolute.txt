@@ -1,0 +1,11 @@
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\bin\Debug\netcoreapp3.0\SetB.exe
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\bin\Debug\netcoreapp3.0\SetB.deps.json
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\bin\Debug\netcoreapp3.0\SetB.runtimeconfig.json
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\bin\Debug\netcoreapp3.0\SetB.runtimeconfig.dev.json
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\bin\Debug\netcoreapp3.0\SetB.dll
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\bin\Debug\netcoreapp3.0\SetB.pdb
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\obj\Debug\netcoreapp3.0\SetB.csprojAssemblyReference.cache
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\obj\Debug\netcoreapp3.0\SetB.AssemblyInfoInputs.cache
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\obj\Debug\netcoreapp3.0\SetB.AssemblyInfo.cs
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\obj\Debug\netcoreapp3.0\SetB.dll
+C:\Users\greta\Documents\Projects\Udemy\IntermediateSetB\SetB\obj\Debug\netcoreapp3.0\SetB.pdb

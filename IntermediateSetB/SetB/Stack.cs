@@ -24,22 +24,43 @@ The Clear() method removes all objects from the stack. */
 
 
 using System;
+using System.Collections.Generic;
 
+
+//Note to self: there are Queue and Stack methods built in to C#, which have stack-like functionality
 namespace SetB
 {
     class Stack
     {
-        private 
-        void Push(object obj)
+        private List<object> _stackList = new List<object>();
+        
+        public void Push(object obj)
         {
-
+            try
+            {
+                if (obj == null) throw new InvalidOperationException();
+                _stackList.Add(obj);
+                Console.WriteLine("Added {0} to stack", obj);
+            }
+            catch(InvalidOperationException)
+            {
+                Console.WriteLine("You can not add Null to the Stack.");
+            }
         }
 
-        object Pop()
+       public object Pop()
         {
-
+           //replace this with null propagation: if (_stackList != null) _stackList.Add(obj);
+           var n = _stackList.Count;
+           var answer = _stackList[n-1];
+           _stackList?.RemoveAt(n-1);
+           return answer;
         }
 
-        void Clear() { }
+        public void Clear()
+        {
+            //_stackList = new List<object>();
+            _stackList.Clear();
+        }
     }
 }
