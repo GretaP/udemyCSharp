@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace IntermediatePolymorphism
 {
     public abstract class DbConnection
     {
+        /// <summary>
+        /// Base class.  Has properties ConnectionString and Timeout, and checks if string param is null/empty
+        /// </summary>
+        /// <param name="connectionString"></param>
         public DbConnection(string connectionString)
         {
             if (String.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("You can not connect with and empty connection string; connection failed.");
@@ -20,6 +21,9 @@ namespace IntermediatePolymorphism
         public abstract void Close();
     }
 
+    /// <summary>
+    /// Inherited from DbConnection.  ConsoleWriteLine specific to SQL in overwritten methods
+    /// </summary>
     public class SqlConnection : DbConnection
     {
         public SqlConnection(string connectionString) : base(connectionString)
@@ -37,6 +41,9 @@ namespace IntermediatePolymorphism
         }
     }
 
+    /// <summary>
+    /// Inherited from DbConnection.  ConsoleWriteLine specific to Oracle in overwritten methods
+    /// </summary>
     public class OracleConnection : DbConnection
     {
         public OracleConnection(string connectionString) : base(connectionString)

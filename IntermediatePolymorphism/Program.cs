@@ -6,12 +6,14 @@ namespace IntermediatePolymorphism
     {
         static void Main(string[] args)
         {
-/*            DbConnection connectionSql = new SqlConnection("nyan kittie");
+            DbConnection connectionSql = new SqlConnection("nyan kittie");
             connectionSql.Open();
             DbConnection connectionOracle = new OracleConnection("Tell us the way of the world oh oracle");
             connectionOracle.Open();
-            connectionOracle.Close();*/
+            connectionOracle.Close();
 
+
+            //Example of exception handled in case of null string
             try
             {
 
@@ -19,7 +21,7 @@ namespace IntermediatePolymorphism
                 //var connectionEmpty = new SqlConnection();
                 connectionEmpty.Open();
             }
-            catch (Exception e)
+            catch (InvalidOperationException e)
             {
                 Console.WriteLine(e.Message);
             }
