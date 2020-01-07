@@ -7,10 +7,9 @@ namespace IntermediatePolymorphism
         static void Main(string[] args)
         {
             DbConnection connectionSql = new SqlConnection("nyan kittie");
-            //connectionSql.Open();
             DbConnection connectionOracle = new OracleConnection("Tell us the way of the world oh oracle");
-            //connectionOracle.Open();
-            //connectionOracle.Close();
+
+            //example of Commands
             DbCommand obey = new DbCommand(connectionOracle, "obey me");
             obey.Execute();
 
@@ -24,6 +23,16 @@ namespace IntermediatePolymorphism
                 var connectionEmpty = new SqlConnection("");
                 //var connectionEmpty = new SqlConnection();
                 connectionEmpty.Open();
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine(e.Message);
+            }*/
+            
+            //example of exception handling in Command class
+/*            try
+            {
+                DbCommand mistake = new DbCommand(connectionSql, "");
             }
             catch (InvalidOperationException e)
             {
