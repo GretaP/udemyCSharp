@@ -39,7 +39,6 @@ namespace IntermediatePolymorphism
                 Console.WriteLine(e.Message);
             }*/
 
-
         }
     }
 }

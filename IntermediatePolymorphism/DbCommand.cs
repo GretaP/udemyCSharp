@@ -29,7 +29,7 @@ namespace IntermediatePolymorphism
         public void Execute()
         {
             Connection.Open();
-            Console.WriteLine(Instruction);
+            Connection.Execute(Instruction);
             Connection.Close();
         }
 

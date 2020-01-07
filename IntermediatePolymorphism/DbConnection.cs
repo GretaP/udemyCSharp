@@ -19,6 +19,7 @@ namespace IntermediatePolymorphism
         
         public abstract void Open();
         public abstract void Close();
+        public abstract void Execute(string command);
     }
 
     /// <summary>
@@ -39,6 +40,11 @@ namespace IntermediatePolymorphism
         {
             Console.WriteLine("SQL Closed Let's pretend");
         }
+
+        public override void Execute(string command)
+        {
+            Console.WriteLine("This is the command in T-SQL language, if there were any logic here: {0}",command);
+        }
     }
 
     /// <summary>
@@ -58,6 +64,11 @@ namespace IntermediatePolymorphism
         public override void Close()
         {
             Console.WriteLine("Oracle Closed Let's pretend");
+        }
+
+        public override void Execute(string command)
+        {
+            Console.WriteLine(command);
         }
     }
 }
