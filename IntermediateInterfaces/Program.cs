@@ -2,6 +2,9 @@
 
 namespace IntermediateInterfaces
 {
+    /// <summary>
+    /// Mock Workflow engine with WriteLine implementation rather than actual tasks
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

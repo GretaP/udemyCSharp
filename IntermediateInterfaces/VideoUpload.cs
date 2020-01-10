@@ -2,6 +2,10 @@
 
 namespace IntermediateInterfaces
 {
+
+    /// <summary>
+    /// mock Activity VideoUpload
+    /// </summary>
     public class VideoUpload : IActivity
     {
         public void Execute()

@@ -2,6 +2,9 @@
 
 namespace IntermediateInterfaces
 {
+    /// <summary>
+    /// Mock activitiy VideoRecordChange
+    /// </summary>
     public class VideoRecordChange : IActivity
     {
         public void Execute()
