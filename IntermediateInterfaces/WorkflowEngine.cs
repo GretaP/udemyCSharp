@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace IntermediateInterfaces
@@ -22,7 +23,6 @@ namespace IntermediateInterfaces
         {
             foreach (var activity in _activityList)
             {
-                //Console.WriteLine(activity);
                 activity.Execute();
             }
         }

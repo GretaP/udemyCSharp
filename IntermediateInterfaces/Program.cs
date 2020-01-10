@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace IntermediateInterfaces
 {
@@ -11,10 +13,19 @@ namespace IntermediateInterfaces
         {
             var testing = new VideoUpload();
 
+            IActivity[] testing2 =
+            {
+                new VideoUpload(),
+                new SendEmail(),
+                new VideoRecordChange()
+            };
+
             try
             {
                 var workflow1 = new WorkflowEngine(testing, new SendEmail(), new VideoRecordChange());
                 workflow1.Run();
+                var workflow2 = new WorkflowEngine(testing2);
+                workflow2.Run();
             }
             catch (InvalidOperationException e)
             {
