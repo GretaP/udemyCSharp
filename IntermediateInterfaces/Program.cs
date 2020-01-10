@@ -6,7 +6,7 @@ namespace IntermediateInterfaces
     {
         void Execute();
     }
-    
+
     public class VideoUpload : IActivity
     {
         public void Execute()
@@ -15,14 +15,49 @@ namespace IntermediateInterfaces
         }
     }
 
+    public class WorkflowEngine
+    {
+        private readonly IActivity[] _activityList;
+
+        public WorkflowEngine(params IActivity[] list)
+        {
+            if (list.Length == 0) throw new InvalidOperationException();
+            _activityList = list; 
+            //_activityList = list ?? throw new InvalidOperationException();
+        }
+
+        public void Run()
+        {
+            foreach (var activity in _activityList)
+            {
+                Console.WriteLine(activity);
+                activity.Execute();
+            }
+        }
+
+    }
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             var testing = new VideoUpload();
-            testing.Execute();
+            //testing.Execute();
+
+            try
+            {
+                var workflow1 = new WorkflowEngine(testing);
+                workflow1.Run();
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine(e);
+                throw;
+
+
+            }
         }
     }
 }
+
