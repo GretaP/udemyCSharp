@@ -19,6 +19,15 @@ namespace IntermediateInterfaces
             _activityList = list; 
         }
 
+        public WorkflowEngine(Array list)
+        {
+            if (list.Length == 0) throw new InvalidOperationException("You can not run a workload that is empty");
+            foreach (var x in list)
+            {
+                
+            }
+        }
+
         public void Run()
         {
             foreach (var activity in _activityList)

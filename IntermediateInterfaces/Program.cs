@@ -11,27 +11,39 @@ namespace IntermediateInterfaces
     {
         static void Main(string[] args)
         {
-            var testing = new VideoUpload();
+/*            var testing = new VideoUpload();
 
             IActivity[] testing2 =
             {
                 new VideoUpload(),
                 new SendEmail(),
                 new VideoRecordChange()
-            };
+            };*/
+
 
             try
             {
-                var workflow1 = new WorkflowEngine(testing, new SendEmail(), new VideoRecordChange());
+/*                var workflow1 = new WorkflowEngine(testing, new SendEmail(), new VideoRecordChange());
                 workflow1.Run();
                 var workflow2 = new WorkflowEngine(testing2);
-                workflow2.Run();
+                workflow2.Run();*/
             }
             catch (InvalidOperationException e)
             {
                 Console.WriteLine(e.Message);
                 Console.WriteLine("Operation aborted");
             }
+
+
+
+            var workflowtest = new WorkFlowList();
+            workflowtest.Add(new SendEmail());
+            workflowtest.Add(new VideoRecordChange());
+            var hello = workflowtest.GetWorkflow();
+            var workflowEngine1 = new WorkflowEngine(hello);
+            workflowEngine1.Run();
+
+
         }
     }
 }
