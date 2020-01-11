@@ -36,12 +36,27 @@ namespace IntermediateInterfaces
 
 
 
+/*
             var workflowtest = new WorkFlowList();
             workflowtest.Add(new SendEmail());
             workflowtest.Add(new VideoRecordChange());
             var hello = workflowtest.GetWorkflow();
             var workflowEngine1 = new WorkflowEngine(hello);
             workflowEngine1.Run();
+*/
+
+
+
+            try
+            {
+                var workflowtest2 = new WorkFlowList();
+                workflowtest2.GetWorkflow();
+            }
+            catch (InvalidOperationException e)
+            {
+                Console.WriteLine(e.Message);
+                
+            }
 
 
         }
