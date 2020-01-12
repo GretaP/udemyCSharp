@@ -16,6 +16,15 @@ namespace IntermediateInterfaces
             _activityList.Add(activity);
         }
 
+        public void Add(params IActivity[] activity)
+        {
+            foreach (var activity1 in activity)
+            {
+                _activityList.Add(activity1);
+
+            }
+        }
+
         public IActivity[] GetWorkflow()
         {
             if (_activityList.Count ==0) throw new InvalidOperationException("Your workflow is empty.  Please add something to your workflow.");
