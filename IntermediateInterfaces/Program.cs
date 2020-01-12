@@ -17,15 +17,25 @@ namespace IntermediateInterfaces
             {
                 try
                 {
-                    Console.WriteLine(
-                        "------------\nMenu: \nV to add VideoUpload to workflow \nC to add change video record to workflow \nE to add email to workflow.  \nS to see your current workflow  \nN to create a new workflow from scratch \nR to run workflow \nesc to end program \n-----------------");
+                    Console.WriteLine("------------");
+                    Console.WriteLine("Menu");
+                    Console.WriteLine("V to add VideoUpload to workflow ");
+                    Console.WriteLine("C to add change video record to workflow");
+                    Console.WriteLine("E to add email to workflow.");
+                    Console.WriteLine("S to see your current workflow");
+                    Console.WriteLine("N to create a new workflow from scratch");
+                    Console.WriteLine("R to run workflow");
+                    Console.WriteLine("esc to end program");
+                    Console.WriteLine("-----------------");
+
                     var key = Console.ReadKey(true);
                     Console.Clear();
 
                     switch (key.Key)
                     {
                         case ConsoleKey.Escape:
-                            return;
+                            Environment.Exit(0);
+                            break;
                         case ConsoleKey.V:
                             workFlow.Add(new VideoUpload());
                             Console.WriteLine("Added VideoUpload to workflow.");
@@ -50,20 +60,21 @@ namespace IntermediateInterfaces
                             }
                             break;
                         case ConsoleKey.R:
-                            Console.WriteLine("-----------------------\nRunning workflow");
-                            var engine = new WorkflowEngine(workFlow.GetWorkflow());
-                            engine.Run();
+                            Console.WriteLine("-----------------------");
+                            Console.WriteLine("Running workflow");
+                            new WorkflowEngine(workFlow.GetWorkflow()).Run();
                             Console.WriteLine("-----------------------");
                             break;
                         default:
                             Console.WriteLine("Invalid entry - try again");
-                            break;
+                            continue;
                     }
-
                 }
                 catch (InvalidOperationException e)
                 {
-                    Console.WriteLine($"{e.Message}\nOperation aborted\n------------");
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine("Operation aborted");
+                    Console.WriteLine("------------");
                 }
             }
         }
